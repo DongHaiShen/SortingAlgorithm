@@ -10,6 +10,11 @@
       <sourceFolder url="file://$MODULE_DIR$/src/BubbleSort" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/SelectionSort" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/InsertionSort" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/CountingSort" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/BucketSort" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/RedixSort" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ShellSort" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/HeapSort" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

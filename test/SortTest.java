@@ -27,35 +27,44 @@ public class SortTest
     }
 
     /**
-     *
      * @param arr
      */
     public static void testAllSortResult(int[] arr)
     {
         int dataSize = arr.length;
 
-        testSortResult(new QuickSort(), Arrays.copyOf(arr, dataSize));
-        testSortResult(new MergeSort(), Arrays.copyOf(arr, dataSize));
+        System.out.println("测试数据量大小为：" + dataSize);
         testSortResult(new BubbleSort(), Arrays.copyOf(arr, dataSize));
         testSortResult(new SelectionSort(), Arrays.copyOf(arr, dataSize));
         testSortResult(new InsertionSort(), Arrays.copyOf(arr, dataSize));
+        testSortResult(new ShellSort(), Arrays.copyOf(arr, dataSize));
+        testSortResult(new HeapSort(), Arrays.copyOf(arr, dataSize));
+        testSortResult(new QuickSort(), Arrays.copyOf(arr, dataSize));
+        testSortResult(new MergeSort(), Arrays.copyOf(arr, dataSize));
+        testSortResult(new CountingSort(), Arrays.copyOf(arr, dataSize));
+        testSortResult(new BucketSort(), Arrays.copyOf(arr, dataSize));
+        testSortResult(new RedixSort(), Arrays.copyOf(arr, dataSize));
     }
 
     /**
-     *
      * @param arr
      */
     public static void testAllFastSortTime(int[] arr)
     {
         int dataSize = arr.length;
 
+        System.out.println("测试数据量大小为：" + dataSize);
+        testSortTime(new ShellSort(), Arrays.copyOf(arr, dataSize));
+        testSortTime(new HeapSort(), Arrays.copyOf(arr, dataSize));
         testSortTime(new QuickSort(), Arrays.copyOf(arr, dataSize));
         testSortTime(new MergeSort(), Arrays.copyOf(arr, dataSize));
+        testSortTime(new CountingSort(), Arrays.copyOf(arr, dataSize));
+        testSortTime(new BucketSort(), Arrays.copyOf(arr, dataSize));
+        testSortTime(new RedixSort(), Arrays.copyOf(arr, dataSize));
         System.out.println();
     }
 
     /**
-     *
      * @param arr
      */
     public static void testAllSlowSortTime(int[] arr)
