@@ -3,12 +3,21 @@
  * @Date Created in 2019/4/3 15:18
  * @description
  */
+
+/**
+ * 堆排序
+ * <p>
+ * 思想：
+ * 1、利用堆这种高效的数据结构，先根据所有元素构建一个最大堆，即堆顶元素为最大值；
+ * 2、然后每次将最后一个元素与堆顶元素互换，得到当前最大值，移动最后一个元素对应的指针并调整堆结构；
+ * 3、如此重复直至所有元素均被处理
+ */
 public class HeapSort implements Sortable
 {
     @Override
     public void sort(int[] sourceArray)
     {
-        if (sourceArray == null && sourceArray.length < 1)
+        if (sourceArray == null || sourceArray.length < 1)
         {
             return;
         }
@@ -24,8 +33,10 @@ public class HeapSort implements Sortable
     {
         int length = arr.length;
 
+        // 构建一个最大堆
         buildMaxHeap(arr, length);
 
+        // 不断将最后一个元素与堆顶元素互换，并调整堆结构
         while (length > 0)
         {
             swap(arr, 0, length - 1);
@@ -35,6 +46,8 @@ public class HeapSort implements Sortable
     }
 
     /**
+     * 构建最大堆
+     *
      * @param arr
      * @param len
      */
@@ -47,6 +60,8 @@ public class HeapSort implements Sortable
     }
 
     /**
+     * 调整堆结构
+     *
      * @param arr
      * @param i
      * @param len
